@@ -84,3 +84,4 @@ INSERT INTO rooms (room_number) VALUES
 (20),
 (21),
 (22);
+
