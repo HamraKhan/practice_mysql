@@ -93,3 +93,23 @@ INSERT INTO all_data_types (`varchar`,
   0, 
   'a', 
   'aaa');
+
+
+
+
+
+
+SELECT `fullname` 
+FROM members 
+INNER JOIN movies 
+ON members.`membership_number` = movies.`movie_id`;
+
+
+SELECT `fullname`, title 
+FROM members 
+INNER JOIN movies 
+ON members.`membership_number` = movies.`movie_id`;
+
+
+SELECT members. `fullname`, movies. `title` FROM members, movies
+WHERE movies. `movie_id` = members. `membership_number`;

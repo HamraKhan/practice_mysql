@@ -96,13 +96,32 @@ INSERT INTO `item` (item_name, price) VALUES
 ("Leather backpack", 49.99);
 
 INSERT INTO card (card_number, cardholder_name, expiry_date) VALUES
-(1111222233334444, "Mr R Whitemore", STR_TO_DATE('31-12-2023', '%d-%m-%Y')),
-(1111222233334444, "Mr M Devon", STR_TO_DATE('31-12-2023', '%d-%m-%Y')),
 (1111222233334444, "Miss C Loraine", STR_TO_DATE('31-12-2023', '%d-%m-%Y')),
-(1111222233334444, "Mr J Laman", STR_TO_DATE('31-12-2023', '%d-%m-%Y')),
-(1111222233334444, "Ms J Roland", STR_TO_DATE('31-12-2023', '%d-%m-%Y')),
-(1111222233334444, "Miss P Amesh", STR_TO_DATE('31-12-2023', '%d-%m-%Y'));
- 
+(1112222333344445, "Ms J Roland", STR_TO_DATE('31-12-2023', '%d-%m-%Y')),
+(3748262004002881, "Mr R Whitemore", STR_TO_DATE('31-12-2023', '%d-%m-%Y')),
+(3999973818394503, "Mr M Devon", STR_TO_DATE('31-12-2023', '%d-%m-%Y')),
+(5830294558272049, "Miss P Amesh", STR_TO_DATE('31-12-2023', '%d-%m-%Y')),
+(4399277472514000, "Mr J Laman", STR_TO_DATE('31-12-2023', '%d-%m-%Y')),
+(1148364928103843, "Miss N Milligan", STR_TO_DATE('31-12-2023', '%d-%m-%Y')); 
 
+INSERT INTO shopping.order (`customer_id`, `card_id`) VALUES
+(1, 7),
+(2, 3);
 
+INSERT INTO shopping.order (`customer_id`, `card_id`) VALUES
+(3, 4),
+(4, 1),
+(5, 6),
+(6, 2),
+(7, 5);
 
+INSERT INTO customer_address (customer_id, address_id) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7);
+
+DELETE FROM `card` WHERE `card_id` IN (1,2,3,4,5,6,7);
