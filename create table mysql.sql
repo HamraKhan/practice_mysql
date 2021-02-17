@@ -113,3 +113,19 @@ ON members.`membership_number` = movies.`movie_id`;
 
 SELECT members. `fullname`, movies. `title` FROM members, movies
 WHERE movies. `movie_id` = members. `membership_number`;
+
+
+
+SELECT `title`, `fullname` 
+FROM `movies` 
+LEFT JOIN `members` 
+ON members.`membership_number` = movies.`movie_id`;
+
+SELECT `fullname`, `title` 
+FROM `members` 
+RIGHT JOIN `movies` 
+ON movies.`movie_id` = members.`membership_number`;
+
+
+SELECT DISTINCT `title`, `director`, `year_released`
+FROM movies;
